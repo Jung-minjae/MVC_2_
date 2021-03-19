@@ -1,0 +1,91 @@
+*{
+    padding :0;
+    margin: 0;
+
+}
+
+
+
+
+body{
+    background-color:rgb(240, 180, 190);
+    box-sizing: border-box;
+}
+.header_bar{
+    background-color: rgba(38, 83, 83, 0.849);   
+    display: flex;
+    justify-content: space-between;
+}
+.header_bar .header_id{
+    display: flex;
+}
+.header_bar .header_id li{
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+    color : white;
+}
+
+
+.nav_bar{
+ background-color: black;   
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 16px;
+
+}
+.nav_bar .nav_logo{
+    font-size: 30px;
+    color: rgb(250, 144, 144);
+    font-family: 'Cute Font', cursive;
+
+}
+.nav_bar .nav_logo i{
+    color :pink;
+}
+
+.nav_bar .nav_menu{
+    color : hotpink;
+    display : flex;
+    list-style: none;
+    font-family: 'Gamja Flower', cursive;
+
+}
+.nav_bar .nav_menu li{
+   
+    padding: 8px 16px;
+}
+
+.nav_bar .nav_icon{
+    color : white;
+    
+}
+.nav_bar .nav_menu li:hover {
+    background: white;
+    border-radius: 8px;
+}
+@media screen and (max-width :768px){
+    .nav_bar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .nav_bar  .nav_menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .nav_bar .nav_menu li{
+
+    text-align: center;
+    width: 100%;
+    }
+    .nav_bar .nav_icon{
+        text-align: center;
+        width: 100%;
+    }
+}
