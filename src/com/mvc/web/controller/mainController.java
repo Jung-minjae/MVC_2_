@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import Jusic.JusicDAO;
 import Jusic.JusicDTO;
 import Jusic.JusicSubDTO;
+import Jusic_.Jusic_kp_kd_DAO;
 import Jusic_.Jusic_kp_kd_DTO;
 import Jusic_.Jusic_kp_kd_sub_DAO;
 import Jusic_KP.JusicDAO_KP;
@@ -30,7 +31,8 @@ public class mainController extends HttpServlet {
 		JusicDTO jd = JD.getUP();
 		JusicDAO_KP KP = new JusicDAO_KP();
 		JusicDTO_KP KP_ = KP.getUP();
-		
+		Jusic_kp_kd_DAO KP_KD = new Jusic_kp_kd_DAO(); 
+		Jusic_kp_kd_DTO KP_KD_ = KP_KD.getKD_KP();
 		
 		for(int i =0; i<jd.getList1().size(); i++) {
 			System.out.println("순서:"+jd.getList1().get(i));
@@ -83,17 +85,17 @@ public class mainController extends HttpServlet {
 		}
 		req.setAttribute("list_1", list_1);
 		
-//		
-//		List<Jusic_kp_kd_DTO>list_0 = new ArrayList<Jusic_kp_kd_DTO>();
-//		
-//		Jusic_kp_kd_DTO jKP = null; 
-//		
-//		for(int i=0; i<(jKP.getList1()).size(); i++) {
-//			String seq = KP_.getList1().get(i);
-//			System.out.println("코스피:"+seq);
-//				list_0.add(jKP);	
-//		}
-//		req.setAttribute("list_0", list_0);
+		
+		List<String>list_0 = new ArrayList<String>();
+		
+		Jusic_kp_kd_sub_DAO jKP = null; 
+		
+		for(int i=0; i<(KP_KD_.getList1()).size(); i++) {
+			String seq = KP_KD_.getList1().get(i);
+			System.out.println("코스피:"+seq);
+				list_0.add(seq);	
+		}
+		req.setAttribute("list_0", list_0);
 
 		RequestDispatcher dis = req.getRequestDispatcher("WEB-INF/index.jsp");
 		dis.forward(req, resp);

@@ -351,16 +351,19 @@ footer {
 				</table>
 			</div>
 			<hr>
-			<div>코스닥 </div>
+
+
+			<div> 코스닥 ${list_0.get(0)} </div>
 			<div>
 			<img src="https://ssl.pstatic.net/imgfinance/chart/main/KOSPI.png?sidcode=1616486820605">
 			</div>
 			<div>
-			코스피 </div>
+			코스피 ${list_0.get(1)} </div>
 			<div>
 			<img src="https://ssl.pstatic.net/imgfinance/chart/main/KOSDAQ.png?sidcode=1616486820607"
 					width="301" height="127" alt="코스닥지수 상세보기">
 			</div>
+			
 			<!-- #content > div.article > div.section2 > div.section_stock_market > div.section_stock > div.kosdaq_area.group_quot.quot_opn > div.chart_area > a > img -->
 
 
